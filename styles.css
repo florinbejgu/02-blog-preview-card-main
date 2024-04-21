@@ -1,0 +1,142 @@
+/* ************************************ */
+/* GLOBAL RESET *********************** */
+/* ************************************ */
+
+*,
+*::before,
+*::after {
+  /* Debugging */
+  /* border: 1px solid red; */
+  /* background: rgba(0, 100, 0, 0.1); */
+
+  /* Global reset of all elements and pseudo-elements, removing default padding&margin */
+  padding: 0;
+  margin: 0;
+  /* Change the Box model so width and height INCLUDE padding and border */
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 1rem rgba(255, 0, 0, 0.5);
+}
+
+html {
+  /* set 1rem to be font-size: 10px so font size calculation is easier e.g. 1.6rem is 16px instead of 1.6 rem being 25.6px*/
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  /* Scrolling to jump links is smooth */
+  scroll-behavior: smooth;
+}
+
+/* Setting text properties */
+body {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Just one border between table cells */
+table {
+  border-collapse: collapse;
+}
+
+/* ************************************ */
+/* GENERAL */
+/* ************************************ */
+
+@font-face {
+  font-family: Figtree;
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+  font-weight: 500, 800;
+}
+
+a:link {
+  /* Removes default ugly styling */
+  text-decoration: none;
+
+  /* Moves underline position */
+  text-underline-offset: 5px;
+}
+
+/* a:visited {
+} */
+
+a:hover {
+  color: hsl(47, 88%, 63%);
+}
+
+/* a:active {
+} */
+
+body {
+  background-color: hsl(47, 88%, 63%);
+  display: grid;
+  place-content: center;
+  font-family: Figtree;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+.wrapper {
+  width: 384px;
+  height: 528px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 10px 10px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.4rem;
+}
+
+.wrapper img {
+  border-radius: 10px;
+}
+
+.post-category {
+  background-color: hsl(47, 88%, 63%);
+  display: inline-block;
+  padding: 5px 12px;
+  font-weight: 800;
+  border-radius: 3px;
+}
+
+.date p {
+  margin: 10px 0 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.post-excerpt h2 {
+  margin-top: 2rem;
+}
+
+.post-excerpt,
+.post-excerpt > p {
+  margin: 10px 0 0;
+}
+
+.post-excerpt > p {
+  color: hsl(0, 0%, 50%);
+  line-height: 2.5rem;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 800;
+}
